@@ -1,1 +1,59 @@
 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Galeria com Paginação</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Cadastre seus Produtos</h1>
+
+<div class="card">
+    <h2>Enviar imagem</h2>
+    <form id="formImg">
+        <div class="form-group">
+            <input type="file" id="imgInput" accept="image/*" required>
+        </div>
+        <div class="form-group">
+            <label for="nome">Produto:</label>
+            <input type="text" id="nome">
+        </div>
+        <div class="form-group">
+            <label for="preco">Preço:</label>
+            <input type="text" id="preco">
+        </div>
+        <div class="form-group">
+            <button type="submit">Salvar</button>
+        </div>
+    </form>
+</div>
+
+<h2 style="text-align: center; color: green;">Visualização dos Produtos Cadastrados</h2>
+<div id="galeria" class="galeria"></div>
+
+
+
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <h3>Editar nome</h3>
+        <input type="text" id="editNome">
+        <button id="salvarEdit">Salvar</button>
+        <button id="fecharModal">Cancelar</button>
+    </div>
+</div>
+
+<div id="modalPreco" class="modal">
+    <div class="modal-content">
+        <h3>Editar preço</h3>
+        <input type="number" id="editPreco" step="0.01">
+        <button id="salvarEditPreco">Salvar</button>
+        <button id="fecharModalPreco">Cancelar</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
